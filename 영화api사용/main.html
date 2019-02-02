@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    this is test page
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./KobisOpenAPIRestService.js">  </script>
+</head>
+<body>
+    
+    <div>
+        <p> this is p in div </p>
+    </div>
+    <div> 
+        <h2> 
+            boxoffice:
+        </h2>
+        <p id="movie">
+        <script>
+          
+            </script>
+        </p>
+    </div>
+
+    <p id="movie">this id is movie </p>
+<input type="button" id="execute" value="execute" />
+<script>
+      
+      function getData() {
+                var a = new KobisOpenAPIRestService();
+            //KobisOpenAPIRestService.prototype.getDailyBoxOffice
+                a.getDailyBoxOffice(false, {
+                    targetDt : today
+                });
+
+            }
+          
+            document.getElementById('execute').addEventListener('click', function() {
+                getData();
+            })
+</script> 
+</body>
+</html>

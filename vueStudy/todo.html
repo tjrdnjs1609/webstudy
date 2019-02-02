@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <title>할일 목록 by 김석원!!</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <h1>할일 목록!!!</h1>
+    <div id="todoList">
+        <ol>
+          <li v-for="todo in todos">
+            {{ todo.text }}
+          </li>
+        </ol>
+    </div>
+    <div id = "add">
+        <button v-on:click="addTodoList">할일목록추가</button>
+    </div>
+
+
+
+    <script>
+    
+    var app4 = new Vue({
+        el: '#todoList',
+        data: {
+            todos: [
+                { text: 'javascript 배우기'},
+                { text: 'Vue배우기'},
+                { text: '무언가 멋진 것을 만들기'}
+            ]
+        }
+    })
+
+
+    
+    
+    
+    
+    </script>
+</body>
+</html>
